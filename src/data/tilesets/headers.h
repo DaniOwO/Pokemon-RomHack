@@ -1574,3 +1574,25 @@ const struct Tileset gTileset_AmberleafHouses =
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_AmberleafHouses,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Indoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_Indoor,
+    .palettes = gTilesetPalettes_PorytilesManaged_Indoor,
+    .metatiles = gMetatiles_PorytilesManaged_Indoor,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Indoor,
+    .callback = InitTilesetAnim_PorytilesManaged_Indoor,
+};
+
+const struct Tileset gTileset_AmberleafInside =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_AmberleafInside,
+    .palettes = gTilesetPalettes_PorytilesManaged_AmberleafInside,
+    .metatiles = gMetatiles_PorytilesManaged_AmberleafInside,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_AmberleafInside,
+    .callback = NULL,
+};

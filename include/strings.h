@@ -2128,6 +2128,15 @@ extern const u8 gText_Summary2[];
 extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
+extern const u8 gText_KantoStarter[];
+extern const u8 gText_JohtoStarter[];
+extern const u8 gText_HoennStarter[];
+extern const u8 gText_SinnohStarter[];
+extern const u8 gText_UnovaStarter[];
+extern const u8 gText_KalosStarter[];
+extern const u8 gText_AlolaStarter[];
+extern const u8 gText_GalarStarter[];
+extern const u8 gText_PaldeaStarter[];
 
 // Exp. Share
 extern const u8 gText_ExpShareOn[];

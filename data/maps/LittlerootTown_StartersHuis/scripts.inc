@@ -6,2638 +6,2250 @@ LittlerootTown_StartersHuis_MapScripts::
 
 LittlerootTown_StartersHuis_EventScript_BallDefault::
 # 6 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setvar VAR_UNUSED_0x40F7, 0
+	setvar STARTER_LAB, 0
 	return
 
 
-LittlerootTown_StartersHuis_EventScript_Zapdos::
+LittlerootTown_StartersHuis_EventScript_Starmans::
 # 10 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 11 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	faceplayer
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_Zapdos_4
-LittlerootTown_StartersHuis_EventScript_Zapdos_3:
-# 28 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_Zapdos_Text_2
-LittlerootTown_StartersHuis_EventScript_Zapdos_1:
-# 30 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 31 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
+	goto_if_unset STARTER_GEN1, LittlerootTown_StartersHuis_EventScript_Starmans_4
+LittlerootTown_StartersHuis_EventScript_Starmans_3:
+# 56 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	msgbox LittlerootTown_StartersHuis_EventScript_Starmans_Text_2, MSGBOX_NPC
+LittlerootTown_StartersHuis_EventScript_Starmans_1:
 	end
 
-LittlerootTown_StartersHuis_EventScript_Zapdos_2:
+LittlerootTown_StartersHuis_EventScript_Starmans_2:
+# 11 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	lock
+# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	faceplayer
 # 13 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_Zapdos_Text_0, MSGBOX_YESNO
+	message LittlerootTown_StartersHuis_EventScript_Starmans_Text_0
 # 14 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_Zapdos_21
-# 24 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_Zapdos_Text_1
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_1
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_4:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_Zapdos_6
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_6:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_Zapdos_8
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_8:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_Zapdos_10
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_10:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_Zapdos_12
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_12:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_Zapdos_14
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_14:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_Zapdos_16
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_16:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_Zapdos_18
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_18:
-# 12 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_Zapdos_2
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_3
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_21:
+	multichoice 25, 5, MULTI_STARTER_CHOICE, 0
 # 15 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_ne LittlerootTown_StartersHuis_EventScript_Zapdos_25
-# 19 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setvar VAR_UNUSED_0x40F7, 0
-LittlerootTown_StartersHuis_EventScript_Zapdos_24:
-# 21 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_Zapdos_Text_1
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_1
-
-LittlerootTown_StartersHuis_EventScript_Zapdos_25:
+	closemessage
 # 16 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	addvar VAR_UNUSED_0x40F7, 1
-	goto LittlerootTown_StartersHuis_EventScript_Zapdos_24
+	compare VAR_RESULT, 0
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_10
+# 20 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_11
+# 24 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_12
+# 28 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_13
+# 32 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_14
+# 36 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_15
+# 40 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 6
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_16
+# 44 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 7
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_17
+# 48 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare VAR_RESULT, 8
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_Starmans_18
+LittlerootTown_StartersHuis_EventScript_Starmans_9:
+# 52 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	msgbox LittlerootTown_StartersHuis_EventScript_Starmans_Text_1
+# 53 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	waitmessage
+# 54 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	release
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_1
+
+LittlerootTown_StartersHuis_EventScript_Starmans_4:
+# 10 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN2, LittlerootTown_StartersHuis_EventScript_Starmans_6
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_3
+
+LittlerootTown_StartersHuis_EventScript_Starmans_6:
+# 10 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN3, LittlerootTown_StartersHuis_EventScript_Starmans_2
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_3
+
+LittlerootTown_StartersHuis_EventScript_Starmans_10:
+# 17 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 18 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 0
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_11:
+# 21 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 22 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 1
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_12:
+# 25 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 26 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 2
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_13:
+# 29 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 30 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 3
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_14:
+# 33 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 34 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 4
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_15:
+# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 38 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 5
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_16:
+# 41 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 42 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 6
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_17:
+# 45 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 46 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 7
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+LittlerootTown_StartersHuis_EventScript_Starmans_18:
+# 49 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call StarterFade
+# 50 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setvar STARTER_LAB, 8
+	goto LittlerootTown_StartersHuis_EventScript_Starmans_9
+
+
+StarterFade::
+# 62 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 63 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	delay 20
+# 64 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+	return
 
 
 LittlerootTown_StartersHuis_EventScript_PokeballOne::
-# 36 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 68 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	lockall
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballOne_4
+# 69 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN1, LittlerootTown_StartersHuis_EventScript_PokeballOne_4
 LittlerootTown_StartersHuis_EventScript_PokeballOne_3:
-# 49 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 99 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
 LittlerootTown_StartersHuis_EventScript_PokeballOne_1:
-# 51 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 101 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	waitmessage
-# 52 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 102 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_StartersHuis_EventScript_PokeballOne_2:
-# 38 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_21
-# 41 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_22
-# 44 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_23
+# 70 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 0
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_9
+# 73 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 1
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_10
+# 76 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 2
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_11
+# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 3
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_12
+# 82 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 4
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_13
+# 85 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 5
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_14
+# 88 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 6
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_15
+# 91 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 7
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_16
+# 94 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 8
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballOne_17
 	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
 
 LittlerootTown_StartersHuis_EventScript_PokeballOne_4:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballOne_6
+# 69 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN2, LittlerootTown_StartersHuis_EventScript_PokeballOne_6
 	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
 
 LittlerootTown_StartersHuis_EventScript_PokeballOne_6:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballOne_8
+# 69 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN3, LittlerootTown_StartersHuis_EventScript_PokeballOne_2
 	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
 
-LittlerootTown_StartersHuis_EventScript_PokeballOne_8:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballOne_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballOne_10:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballOne_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballOne_12:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballOne_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballOne_14:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballOne_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballOne_16:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballOne_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballOne_18:
-# 37 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballOne_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballOne_21:
-# 39 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballOne_9:
+# 71 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Bulbasaur
 	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
 
-LittlerootTown_StartersHuis_EventScript_PokeballOne_22:
-# 42 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Charmander
+LittlerootTown_StartersHuis_EventScript_PokeballOne_10:
+# 74 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Chikorita
 	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
 
-LittlerootTown_StartersHuis_EventScript_PokeballOne_23:
-# 45 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Squirtle
+LittlerootTown_StartersHuis_EventScript_PokeballOne_11:
+# 77 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Treecko
+	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballOne_12:
+# 80 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Turtwig
+	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballOne_13:
+# 83 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Snivy
+	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballOne_14:
+# 86 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Chespin
+	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballOne_15:
+# 89 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Rowlet
+	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballOne_16:
+# 92 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Grookey
+	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballOne_17:
+# 95 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Sprigatito
 	goto LittlerootTown_StartersHuis_EventScript_PokeballOne_1
 
 
 LittlerootTown_StartersHuis_EventScript_PokeballTwo::
-# 57 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 107 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	lockall
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballTwo_4
+# 108 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN1, LittlerootTown_StartersHuis_EventScript_PokeballTwo_4
 LittlerootTown_StartersHuis_EventScript_PokeballTwo_3:
-# 70 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 138 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
 LittlerootTown_StartersHuis_EventScript_PokeballTwo_1:
-# 72 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 140 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	waitmessage
-# 73 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 141 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_StartersHuis_EventScript_PokeballTwo_2:
-# 59 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_21
-# 62 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_22
-# 65 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_23
+# 109 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 0
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_9
+# 112 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 1
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_10
+# 115 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 2
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_11
+# 118 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 3
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_12
+# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 4
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_13
+# 124 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 5
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_14
+# 127 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 6
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_15
+# 130 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 7
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_16
+# 133 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 8
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballTwo_17
 	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
 
 LittlerootTown_StartersHuis_EventScript_PokeballTwo_4:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballTwo_6
+# 108 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN2, LittlerootTown_StartersHuis_EventScript_PokeballTwo_6
 	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
 
 LittlerootTown_StartersHuis_EventScript_PokeballTwo_6:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballTwo_8
+# 108 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN3, LittlerootTown_StartersHuis_EventScript_PokeballTwo_2
 	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
 
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_8:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballTwo_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_10:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballTwo_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_12:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballTwo_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_14:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballTwo_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_16:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballTwo_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_18:
-# 58 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballTwo_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_21:
-# 60 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Chikorita
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_9:
+# 110 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Charmander
 	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
 
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_22:
-# 63 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_10:
+# 113 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Cyndaquil
 	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
 
-LittlerootTown_StartersHuis_EventScript_PokeballTwo_23:
-# 66 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Totodile
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_11:
+# 116 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Torchic
+	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_12:
+# 119 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Chimchar
+	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_13:
+# 122 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Tepig
+	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_14:
+# 125 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Fennekin
+	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_15:
+# 128 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Litten
+	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_16:
+# 131 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Scorbunny
+	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballTwo_17:
+# 134 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Fuecoco
 	goto LittlerootTown_StartersHuis_EventScript_PokeballTwo_1
 
 
 LittlerootTown_StartersHuis_EventScript_PokeballThree::
-# 78 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 146 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	lockall
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballThree_4
+# 147 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN1, LittlerootTown_StartersHuis_EventScript_PokeballThree_4
 LittlerootTown_StartersHuis_EventScript_PokeballThree_3:
-# 91 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 177 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
 LittlerootTown_StartersHuis_EventScript_PokeballThree_1:
-# 93 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 179 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	waitmessage
-# 94 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 180 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	releaseall
 	end
 
 LittlerootTown_StartersHuis_EventScript_PokeballThree_2:
-# 80 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_21
-# 83 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_22
-# 86 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_23
+# 148 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 0
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_9
+# 151 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 1
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_10
+# 154 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 2
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_11
+# 157 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 3
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_12
+# 160 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 4
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_13
+# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 5
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_14
+# 166 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 6
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_15
+# 169 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 7
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_16
+# 172 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	compare STARTER_LAB, 8
+	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballThree_17
 	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
 LittlerootTown_StartersHuis_EventScript_PokeballThree_4:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballThree_6
+# 147 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN2, LittlerootTown_StartersHuis_EventScript_PokeballThree_6
 	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
 
 LittlerootTown_StartersHuis_EventScript_PokeballThree_6:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballThree_8
+# 147 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	goto_if_unset STARTER_GEN3, LittlerootTown_StartersHuis_EventScript_PokeballThree_2
 	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
 
-LittlerootTown_StartersHuis_EventScript_PokeballThree_8:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballThree_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
+LittlerootTown_StartersHuis_EventScript_PokeballThree_9:
+# 149 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Squirtle
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
 LittlerootTown_StartersHuis_EventScript_PokeballThree_10:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballThree_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballThree_12:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballThree_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballThree_14:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballThree_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballThree_16:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballThree_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballThree_18:
-# 79 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballThree_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballThree_21:
-# 81 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Treecko
+# 152 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	call LittlerootTown_StartersHuis_EventScript_Totodile
 	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
-LittlerootTown_StartersHuis_EventScript_PokeballThree_22:
-# 84 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Torchic
-	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballThree_23:
-# 87 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballThree_11:
+# 155 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Mudkip
 	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour::
-# 99 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballFour_4
-LittlerootTown_StartersHuis_EventScript_PokeballFour_3:
-# 112 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
-LittlerootTown_StartersHuis_EventScript_PokeballFour_1:
-# 114 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 115 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
-	end
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_2:
-# 101 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballFour_21
-# 104 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballFour_22
-# 107 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballFour_23
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_4:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballFour_6
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_6:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballFour_8
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_8:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballFour_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_10:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballFour_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_12:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballFour_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_14:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballFour_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_16:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballFour_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_18:
-# 100 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballFour_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_21:
-# 102 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Turtwig
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_22:
-# 105 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Chimchar
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballFour_23:
-# 108 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballThree_12:
+# 158 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Piplup
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFour_1
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive::
-# 120 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballFive_4
-LittlerootTown_StartersHuis_EventScript_PokeballFive_3:
-# 133 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
-LittlerootTown_StartersHuis_EventScript_PokeballFive_1:
-# 135 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 136 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
-	end
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_2:
-# 122 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballFive_21
-# 125 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballFive_22
-# 128 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballFive_23
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_4:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballFive_6
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_6:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballFive_8
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_8:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballFive_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_10:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballFive_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_12:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballFive_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_14:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballFive_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_16:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballFive_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_18:
-# 121 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballFive_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_21:
-# 123 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Snivy
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_22:
-# 126 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Tepig
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballFive_23:
-# 129 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballThree_13:
+# 161 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Oshawott
-	goto LittlerootTown_StartersHuis_EventScript_PokeballFive_1
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix::
-# 141 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballSix_4
-LittlerootTown_StartersHuis_EventScript_PokeballSix_3:
-# 154 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
-LittlerootTown_StartersHuis_EventScript_PokeballSix_1:
-# 156 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 157 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
-	end
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_2:
-# 143 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballSix_21
-# 146 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballSix_22
-# 149 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballSix_23
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_4:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballSix_6
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_6:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballSix_8
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_8:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballSix_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_10:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballSix_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_12:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballSix_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_14:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballSix_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_16:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballSix_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_18:
-# 142 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballSix_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_21:
-# 144 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Chespin
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_22:
-# 147 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Fennekin
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballSix_23:
-# 150 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Froakie
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSix_1
-
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven::
-# 162 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballSeven_4
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_3:
-# 175 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_1:
-# 177 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 178 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
-	end
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_2:
+LittlerootTown_StartersHuis_EventScript_PokeballThree_14:
 # 164 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballSeven_21
+	call LittlerootTown_StartersHuis_EventScript_Froakie
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
+
+LittlerootTown_StartersHuis_EventScript_PokeballThree_15:
 # 167 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballSeven_22
-# 170 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballSeven_23
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_4:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballSeven_6
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_6:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballSeven_8
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_8:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballSeven_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_10:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballSeven_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_12:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballSeven_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_14:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballSeven_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_16:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballSeven_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_18:
-# 163 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballSeven_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_21:
-# 165 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Rowlet
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_22:
-# 168 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Litten
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballSeven_23:
-# 171 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Popplio
-	goto LittlerootTown_StartersHuis_EventScript_PokeballSeven_1
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight::
-# 183 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballEight_4
-LittlerootTown_StartersHuis_EventScript_PokeballEight_3:
-# 196 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
-LittlerootTown_StartersHuis_EventScript_PokeballEight_1:
-# 198 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 199 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
-	end
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_2:
-# 185 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballEight_21
-# 188 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballEight_22
-# 191 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballEight_23
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_4:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballEight_6
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_6:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballEight_8
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_8:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballEight_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_10:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballEight_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_12:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballEight_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_14:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballEight_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_16:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballEight_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_18:
-# 184 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballEight_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_21:
-# 186 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Grookey
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_22:
-# 189 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Scorbunny
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballEight_23:
-# 192 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballThree_16:
+# 170 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Sobble
-	goto LittlerootTown_StartersHuis_EventScript_PokeballEight_1
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine::
-# 204 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	lockall
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x020, LittlerootTown_StartersHuis_EventScript_PokeballNine_4
-LittlerootTown_StartersHuis_EventScript_PokeballNine_3:
-# 217 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	msgbox LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0
-LittlerootTown_StartersHuis_EventScript_PokeballNine_1:
-# 219 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	waitmessage
-# 220 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	releaseall
-	end
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_2:
-# 206 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 0
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballNine_21
-# 209 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 1
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballNine_22
-# 212 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	compare VAR_UNUSED_0x40F7, 2
-	goto_if_eq LittlerootTown_StartersHuis_EventScript_PokeballNine_23
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_4:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x021, LittlerootTown_StartersHuis_EventScript_PokeballNine_6
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_6:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x022, LittlerootTown_StartersHuis_EventScript_PokeballNine_8
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_8:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x023, LittlerootTown_StartersHuis_EventScript_PokeballNine_10
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_10:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x024, LittlerootTown_StartersHuis_EventScript_PokeballNine_12
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_12:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x025, LittlerootTown_StartersHuis_EventScript_PokeballNine_14
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_14:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x026, LittlerootTown_StartersHuis_EventScript_PokeballNine_16
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_16:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x027, LittlerootTown_StartersHuis_EventScript_PokeballNine_18
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_18:
-# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x028, LittlerootTown_StartersHuis_EventScript_PokeballNine_2
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_3
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_21:
-# 207 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Sprigatito
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_22:
-# 210 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	call LittlerootTown_StartersHuis_EventScript_Fuecoco
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_1
-
-LittlerootTown_StartersHuis_EventScript_PokeballNine_23:
-# 213 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_PokeballThree_17:
+# 173 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call LittlerootTown_StartersHuis_EventScript_Quaxly
-	goto LittlerootTown_StartersHuis_EventScript_PokeballNine_1
+	goto LittlerootTown_StartersHuis_EventScript_PokeballThree_1
 
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur::
-# 225 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 185 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_BULBASAUR, 10, 3
-# 226 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 186 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_0, MSGBOX_YESNO
-# 227 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 187 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Bulbasaur_1
-# 249 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 209 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 250 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 210 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur_1:
-# 228 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 188 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_BULBASAUR, 5
-# 229 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 189 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Bulbasaur_4
-# 236 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 196 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Bulbasaur_5
-# 244 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 204 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 245 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur_4:
-# 230 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 190 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 231 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 191 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_1
-# 232 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 192 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	removeobject 1
-# 233 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 234 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 193 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 194 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur_5:
-# 237 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 197 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 238 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 198 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_1
-# 239 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 199 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	removeobject 1
-# 240 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 241 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 200 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 201 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Charmander::
-# 255 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 215 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_CHARMANDER, 10, 3
-# 256 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 216 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Charmander_Text_0, MSGBOX_YESNO
-# 257 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 217 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Charmander_1
-# 279 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 239 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 280 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 240 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Charmander_1:
-# 258 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 218 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_CHARMANDER, 5
-# 259 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 219 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Charmander_4
-# 266 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 226 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Charmander_5
-# 274 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 234 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 275 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 235 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Charmander_4:
-# 260 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 220 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 261 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 221 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Charmander_Text_1
-# 262 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 1
-# 263 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 264 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 222 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 223 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 224 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Charmander_5:
-# 267 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 227 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 268 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 228 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Charmander_Text_1
-# 269 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 1
-# 270 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 271 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 229 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 230 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 231 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Squirtle::
-# 285 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 245 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_SQUIRTLE, 10, 3
-# 286 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 246 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Squirtle_Text_0, MSGBOX_YESNO
-# 287 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 247 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Squirtle_1
-# 309 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 269 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 310 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 270 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Squirtle_1:
-# 288 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 248 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_SQUIRTLE, 5
-# 289 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 249 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Squirtle_4
-# 296 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 256 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Squirtle_5
-# 304 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 264 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 305 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 265 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Squirtle_4:
-# 290 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 250 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 291 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 251 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Squirtle_Text_1
-# 292 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 1
-# 293 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 294 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 252 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 253 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 254 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Squirtle_5:
-# 297 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 257 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 298 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 258 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Squirtle_Text_1
-# 299 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 1
-# 300 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x020
-# 301 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 259 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 260 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 261 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Chikorita::
-# 315 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 275 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_CHIKORITA, 10, 3
-# 316 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 276 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chikorita_Text_0, MSGBOX_YESNO
-# 317 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 277 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chikorita_1
-# 339 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 299 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 340 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 300 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chikorita_1:
-# 318 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 278 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_CHIKORITA, 5
-# 319 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 279 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chikorita_4
-# 326 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 286 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chikorita_5
-# 334 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 294 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 335 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 295 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chikorita_4:
-# 320 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 280 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 321 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 281 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chikorita_Text_1
-# 322 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 2
-# 323 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x021
-# 324 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 282 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 283 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 284 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chikorita_5:
-# 327 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 287 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 328 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 288 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chikorita_Text_1
-# 329 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 2
-# 330 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x021
-# 331 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 289 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 290 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 291 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Cyndaquil::
-# 345 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 305 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_CYNDAQUIL, 10, 3
-# 346 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 306 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Cyndaquil_Text_0, MSGBOX_YESNO
-# 347 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 307 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Cyndaquil_1
-# 369 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 329 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 370 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 330 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Cyndaquil_1:
-# 348 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 308 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_CYNDAQUIL, 5
-# 349 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 309 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Cyndaquil_4
-# 356 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 316 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Cyndaquil_5
-# 364 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 324 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 365 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 325 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Cyndaquil_4:
-# 350 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 310 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 351 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 311 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Cyndaquil_Text_1
-# 352 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 312 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	removeobject 2
-# 353 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x021
-# 354 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 313 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 314 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Cyndaquil_5:
-# 357 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 317 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 358 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 318 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Cyndaquil_Text_1
-# 359 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 319 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	removeobject 2
-# 360 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x021
-# 361 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 320 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 321 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Totodile::
-# 375 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 335 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_TOTODILE, 10, 3
-# 376 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 336 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Totodile_Text_0, MSGBOX_YESNO
-# 377 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 337 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Totodile_1
-# 399 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 359 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 400 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 360 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Totodile_1:
-# 378 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 338 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_TOTODILE, 5
-# 379 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 339 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Totodile_4
-# 386 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 346 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Totodile_5
-# 394 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 354 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 395 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 355 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Totodile_4:
-# 380 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 340 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 381 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 341 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Totodile_Text_1
-# 382 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 2
-# 383 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x021
-# 384 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 342 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 343 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 344 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Totodile_5:
-# 387 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 347 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 388 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 348 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Totodile_Text_1
-# 389 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 2
-# 390 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x021
-# 391 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 349 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 350 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 351 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Treecko::
-# 405 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 365 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_TREECKO, 10, 3
-# 406 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 366 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Treecko_Text_0, MSGBOX_YESNO
-# 407 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 367 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Treecko_1
-# 429 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 389 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 430 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 390 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Treecko_1:
-# 408 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 368 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_TREECKO, 5
-# 409 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 369 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Treecko_4
-# 416 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 376 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Treecko_5
-# 424 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 384 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 425 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 385 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Treecko_4:
-# 410 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 370 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 411 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 371 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Treecko_Text_1
-# 412 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 3
-# 413 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x022
-# 414 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 372 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 373 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 374 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Treecko_5:
-# 417 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 377 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 418 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 378 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Treecko_Text_1
-# 419 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 3
-# 420 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x022
-# 421 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 379 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 380 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 381 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Torchic::
-# 435 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 395 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_TORCHIC, 10, 3
-# 436 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 396 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Torchic_Text_0, MSGBOX_YESNO
-# 437 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 397 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Torchic_1
-# 459 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 419 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 460 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 420 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Torchic_1:
-# 438 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 398 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_TORCHIC, 5
-# 439 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 399 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Torchic_4
-# 446 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 406 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Torchic_5
-# 454 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 414 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 455 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 415 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Torchic_4:
-# 440 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 400 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 441 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 401 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Torchic_Text_1
-# 442 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 3
-# 443 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x022
-# 444 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 402 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 403 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 404 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Torchic_5:
-# 447 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 407 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 448 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 408 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Torchic_Text_1
-# 449 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 3
-# 450 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x022
-# 451 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 409 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 410 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 411 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Mudkip::
-# 465 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 425 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_MUDKIP, 10, 3
-# 466 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 426 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Mudkip_Text_0, MSGBOX_YESNO
-# 467 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 427 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Mudkip_1
-# 489 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 449 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 490 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 450 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Mudkip_1:
-# 468 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 428 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_MUDKIP, 5
-# 469 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 429 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Mudkip_4
-# 476 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 436 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Mudkip_5
-# 484 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 444 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 485 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 445 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Mudkip_4:
-# 470 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 430 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 471 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 431 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Mudkip_Text_1
-# 472 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 432 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	removeobject 3
-# 473 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x022
-# 474 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 433 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 434 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Mudkip_5:
-# 477 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 437 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 478 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 438 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Mudkip_Text_1
-# 479 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 439 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	removeobject 3
-# 480 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x022
-# 481 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 440 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 441 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Turtwig::
-# 495 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 455 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_TURTWIG, 10, 3
-# 496 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 456 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Turtwig_Text_0, MSGBOX_YESNO
-# 497 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 457 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Turtwig_1
-# 519 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 479 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 520 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 480 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Turtwig_1:
-# 498 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 458 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_TURTWIG, 5
-# 499 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 459 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Turtwig_4
-# 506 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 466 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Turtwig_5
-# 514 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 474 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 515 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 475 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Turtwig_4:
-# 500 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 460 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 501 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 461 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Turtwig_Text_1
-# 502 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 4
-# 503 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x023
-# 504 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 462 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 463 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 464 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Turtwig_5:
-# 507 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 467 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 508 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 468 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Turtwig_Text_1
-# 509 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 4
-# 510 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x023
-# 511 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 469 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 470 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 471 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Chimchar::
-# 525 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 485 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_CHIMCHAR, 10, 3
-# 526 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 486 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chimchar_Text_0, MSGBOX_YESNO
-# 527 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 487 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chimchar_1
-# 549 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 509 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 550 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 510 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chimchar_1:
-# 528 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 488 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_CHIMCHAR, 5
-# 529 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 489 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chimchar_4
-# 536 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 496 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chimchar_5
-# 544 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 504 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 545 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 505 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chimchar_4:
-# 530 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 490 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 531 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 491 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chimchar_Text_1
-# 532 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 4
-# 533 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x023
-# 534 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 492 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 493 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 494 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chimchar_5:
-# 537 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 497 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 538 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 498 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chimchar_Text_1
-# 539 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 4
-# 540 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x023
-# 541 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 499 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 500 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 501 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Piplup::
-# 555 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 515 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_PIPLUP, 10, 3
-# 556 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 516 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Piplup_Text_0, MSGBOX_YESNO
-# 557 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 517 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Piplup_1
-# 579 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 539 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 580 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 540 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Piplup_1:
-# 558 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 518 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_PIPLUP, 5
-# 559 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 519 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Piplup_4
-# 566 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 526 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Piplup_5
-# 574 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 534 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 575 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 535 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Piplup_4:
-# 560 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 520 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 561 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 521 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Piplup_Text_1
-# 562 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 4
-# 563 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x023
-# 564 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 522 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 523 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 524 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Piplup_5:
-# 567 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 527 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 568 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 528 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Piplup_Text_1
-# 569 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 4
-# 570 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x023
-# 571 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 529 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 530 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 531 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Snivy::
-# 585 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 545 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_SNIVY, 10, 3
-# 586 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 546 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Snivy_Text_0, MSGBOX_YESNO
-# 587 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 547 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Snivy_1
-# 609 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 569 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 610 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 570 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Snivy_1:
-# 588 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 548 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_SNIVY, 5
-# 589 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 549 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Snivy_4
-# 596 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 556 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Snivy_5
-# 604 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 564 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 605 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 565 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Snivy_4:
-# 590 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 550 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 591 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 551 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Snivy_Text_1
-# 592 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 5
-# 593 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x024
-# 594 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 552 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 553 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 554 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Snivy_5:
-# 597 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 557 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 598 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 558 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Snivy_Text_1
-# 599 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 5
-# 600 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x024
-# 601 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 559 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 560 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 561 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Tepig::
-# 615 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 575 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_TEPIG, 10, 3
-# 616 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 576 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Tepig_Text_0, MSGBOX_YESNO
-# 617 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 577 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Tepig_1
-# 639 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 599 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 640 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 600 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Tepig_1:
-# 618 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 578 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_TEPIG, 5
-# 619 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 579 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Tepig_4
-# 626 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 586 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Tepig_5
-# 634 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 594 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 635 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 595 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Tepig_4:
-# 620 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 580 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 621 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 581 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Tepig_Text_1
-# 622 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 5
-# 623 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x024
-# 624 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 582 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 583 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 584 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Tepig_5:
-# 627 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 587 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 628 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 588 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Tepig_Text_1
-# 629 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 5
-# 630 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x024
-# 631 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 589 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 590 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 591 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Oshawott::
-# 645 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 605 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_OSHAWOTT, 10, 3
-# 646 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 606 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Oshawott_Text_0, MSGBOX_YESNO
-# 647 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 607 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Oshawott_1
-# 669 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 629 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 670 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 630 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Oshawott_1:
-# 648 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 608 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_OSHAWOTT, 5
-# 649 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 609 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Oshawott_4
-# 656 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 616 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Oshawott_5
-# 664 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 624 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 665 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 625 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Oshawott_4:
-# 650 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 610 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 651 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 611 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Oshawott_Text_1
-# 652 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 5
-# 653 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x024
-# 654 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 612 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 613 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 614 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Oshawott_5:
-# 657 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 617 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 658 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 618 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Oshawott_Text_1
-# 659 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 5
-# 660 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x024
-# 661 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 619 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 620 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 621 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Chespin::
-# 675 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 635 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_CHESPIN, 10, 3
-# 676 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 636 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chespin_Text_0, MSGBOX_YESNO
-# 677 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 637 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chespin_1
-# 699 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 659 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 700 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 660 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chespin_1:
-# 678 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 638 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_CHESPIN, 5
-# 679 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 639 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chespin_4
-# 686 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 646 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Chespin_5
-# 694 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 654 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 695 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 655 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chespin_4:
-# 680 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 640 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 681 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 641 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chespin_Text_1
-# 682 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 6
-# 683 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 684 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 642 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 643 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 644 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Chespin_5:
-# 687 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 647 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 688 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 648 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Chespin_Text_1
-# 689 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 6
-# 690 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 691 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 649 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 650 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 651 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Fennekin::
-# 705 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 665 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_FENNEKIN, 10, 3
-# 706 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 666 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Fennekin_Text_0, MSGBOX_YESNO
-# 707 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 667 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Fennekin_1
-# 729 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 689 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 730 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 690 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Fennekin_1:
-# 708 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 668 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_FENNEKIN, 5
-# 709 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 669 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Fennekin_4
-# 716 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 676 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Fennekin_5
-# 724 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 684 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 725 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 685 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Fennekin_4:
-# 710 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 670 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 711 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 671 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Fennekin_Text_1
-# 712 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 6
-# 713 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 714 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 672 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 673 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 674 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Fennekin_5:
-# 717 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 677 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 718 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 678 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Fennekin_Text_1
-# 719 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 6
-# 720 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 721 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 679 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 680 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 681 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Froakie::
-# 735 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 695 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_FROAKIE, 10, 3
-# 736 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 696 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Froakie_Text_0, MSGBOX_YESNO
-# 737 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 697 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Froakie_1
-# 759 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 719 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 760 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 720 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Froakie_1:
-# 738 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 698 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_FROAKIE, 5
-# 739 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 699 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Froakie_4
-# 746 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 706 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Froakie_5
-# 754 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 714 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 755 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 715 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Froakie_4:
-# 740 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 700 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 741 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 701 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Froakie_Text_1
-# 742 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 6
-# 743 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 744 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 702 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 703 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 704 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Froakie_5:
-# 747 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 707 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 748 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 708 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Froakie_Text_1
-# 749 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 6
-# 750 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x025
-# 751 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 709 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 710 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 711 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Rowlet::
-# 765 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 725 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_ROWLET, 10, 3
-# 766 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 726 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Rowlet_Text_0, MSGBOX_YESNO
-# 767 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 727 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Rowlet_1
-# 789 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 749 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 790 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 750 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Rowlet_1:
-# 768 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 728 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_ROWLET, 5
-# 769 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 729 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Rowlet_4
-# 776 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 736 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Rowlet_5
-# 784 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 744 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 785 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 745 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Rowlet_4:
-# 770 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 730 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 771 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 731 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Rowlet_Text_1
-# 772 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 7
-# 773 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x026
-# 774 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 732 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 733 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 734 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Rowlet_5:
-# 777 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 737 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 778 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 738 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Rowlet_Text_1
-# 779 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 7
-# 780 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x026
-# 781 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 739 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 740 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 741 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Litten::
-# 795 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 755 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_LITTEN, 10, 3
-# 796 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 756 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Litten_Text_0, MSGBOX_YESNO
-# 797 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 757 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Litten_1
-# 819 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 779 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 820 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 780 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Litten_1:
-# 798 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 758 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_LITTEN, 5
-# 799 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 759 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Litten_4
-# 806 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 766 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Litten_5
-# 814 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 774 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 815 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 775 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Litten_4:
-# 800 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 760 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 801 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 761 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Litten_Text_1
-# 802 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 7
-# 803 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x026
-# 804 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 762 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 763 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 764 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Litten_5:
-# 807 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 767 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 808 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 768 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Litten_Text_1
-# 809 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 7
-# 810 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x026
-# 811 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 769 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 770 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 771 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Popplio::
-# 825 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 785 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_POPPLIO, 10, 3
-# 826 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 786 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Popplio_Text_0, MSGBOX_YESNO
-# 827 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 787 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Popplio_1
-# 849 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 809 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 850 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 810 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Popplio_1:
-# 828 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 788 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_POPPLIO, 5
-# 829 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 789 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Popplio_4
-# 836 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 796 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Popplio_5
-# 844 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 804 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 845 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 805 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Popplio_4:
-# 830 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 790 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 831 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 791 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Popplio_Text_1
-# 832 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 7
-# 833 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x026
-# 834 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 792 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 793 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 794 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Popplio_5:
-# 837 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 797 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 838 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 798 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Popplio_Text_1
-# 839 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 7
-# 840 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x026
-# 841 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 799 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 800 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 801 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Grookey::
-# 855 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 815 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_GROOKEY, 10, 3
-# 856 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 816 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Grookey_Text_0, MSGBOX_YESNO
-# 857 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 817 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Grookey_1
-# 879 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 839 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 880 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 840 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Grookey_1:
-# 858 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 818 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_GROOKEY, 5
-# 859 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 819 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Grookey_4
-# 866 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 826 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Grookey_5
-# 874 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 834 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 875 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 835 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Grookey_4:
-# 860 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 820 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 861 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 821 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Grookey_Text_1
-# 862 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 8
-# 863 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x027
-# 864 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 822 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 823 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 824 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Grookey_5:
-# 867 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 827 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 868 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 828 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Grookey_Text_1
-# 869 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 8
-# 870 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x027
-# 871 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 829 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 830 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 831 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Scorbunny::
-# 885 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 845 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_SCORBUNNY, 10, 3
-# 886 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 846 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Scorbunny_Text_0, MSGBOX_YESNO
-# 887 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 847 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Scorbunny_1
-# 909 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 869 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 910 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 870 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Scorbunny_1:
-# 888 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 848 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_SCORBUNNY, 5
-# 889 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 849 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Scorbunny_4
-# 896 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 856 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Scorbunny_5
-# 904 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 864 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 905 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 865 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Scorbunny_4:
-# 890 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 850 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 891 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 851 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Scorbunny_Text_1
-# 892 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 8
-# 893 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x027
-# 894 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 852 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 853 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 854 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Scorbunny_5:
-# 897 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 857 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 898 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 858 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Scorbunny_Text_1
-# 899 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 8
-# 900 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x027
-# 901 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 859 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 860 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 861 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Sobble::
-# 915 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 875 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_SOBBLE, 10, 3
-# 916 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 876 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Sobble_Text_0, MSGBOX_YESNO
-# 917 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 877 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Sobble_1
-# 939 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 899 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 940 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 900 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Sobble_1:
-# 918 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 878 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_SOBBLE, 5
-# 919 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 879 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Sobble_4
-# 926 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 886 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Sobble_5
-# 934 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 894 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 935 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 895 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Sobble_4:
-# 920 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 880 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 921 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 881 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Sobble_Text_1
-# 922 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 8
-# 923 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x027
-# 924 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 882 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 883 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 884 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Sobble_5:
-# 927 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 887 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 928 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 888 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Sobble_Text_1
-# 929 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 8
-# 930 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x027
-# 931 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 889 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 890 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 891 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Sprigatito::
-# 945 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 905 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_SPRIGATITO, 10, 3
-# 946 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 906 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Sprigatito_Text_0, MSGBOX_YESNO
-# 947 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 907 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Sprigatito_1
-# 969 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 929 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 970 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 930 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Sprigatito_1:
-# 948 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 908 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_SPRIGATITO, 5
-# 949 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 909 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Sprigatito_4
-# 956 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 916 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Sprigatito_5
-# 964 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 924 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 965 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 925 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Sprigatito_4:
-# 950 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 910 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 951 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 911 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Sprigatito_Text_1
-# 952 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 9
-# 953 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x028
-# 954 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 912 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 913 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 914 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Sprigatito_5:
-# 957 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 917 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 958 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 918 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Sprigatito_Text_1
-# 959 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 9
-# 960 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x028
-# 961 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 919 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 1
+# 920 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN1
+# 921 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Fuecoco::
-# 975 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 935 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_FUECOCO, 10, 3
-# 976 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 936 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Fuecoco_Text_0, MSGBOX_YESNO
-# 977 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 937 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Fuecoco_1
-# 999 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 959 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 1000 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 960 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Fuecoco_1:
-# 978 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 938 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_FUECOCO, 5
-# 979 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 939 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Fuecoco_4
-# 986 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 946 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Fuecoco_5
-# 994 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 954 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 995 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 955 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Fuecoco_4:
-# 980 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 940 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 981 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 941 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Fuecoco_Text_1
-# 982 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 9
-# 983 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x028
-# 984 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 942 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 943 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 944 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Fuecoco_5:
-# 987 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 947 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 988 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 948 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Fuecoco_Text_1
-# 989 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 9
-# 990 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x028
-# 991 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 949 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 2
+# 950 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN2
+# 951 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 LittlerootTown_StartersHuis_EventScript_Quaxly::
-# 1005 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 965 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	showmonpic SPECIES_QUAXLY, 10, 3
-# 1006 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 966 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Quaxly_Text_0, MSGBOX_YESNO
-# 1007 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 967 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Quaxly_1
-# 1029 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 989 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 1030 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 990 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_NotChosen
 	return
 
 LittlerootTown_StartersHuis_EventScript_Quaxly_1:
-# 1008 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 968 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	givemon SPECIES_QUAXLY, 5
-# 1009 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 969 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Quaxly_4
-# 1016 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 976 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq LittlerootTown_StartersHuis_EventScript_Quaxly_5
-# 1024 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 984 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 1025 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 985 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2
 	return
 
 LittlerootTown_StartersHuis_EventScript_Quaxly_4:
-# 1010 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 970 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 1011 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 971 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Quaxly_Text_1
-# 1012 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 9
-# 1013 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x028
-# 1014 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 972 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 973 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 974 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknamePartyMon
 	return
 
 LittlerootTown_StartersHuis_EventScript_Quaxly_5:
-# 1017 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 977 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 1018 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 978 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox LittlerootTown_StartersHuis_EventScript_Quaxly_Text_1
-# 1019 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	removeobject 9
-# 1020 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	setflag FLAG_UNUSED_0x028
-# 1021 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 979 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	removeobject 3
+# 980 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	setflag STARTER_GEN3
+# 981 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call NicknameBoxMon
 	return
 
 
 NicknamePartyMon::
-# 1035 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 995 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 1036 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 996 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 1037 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 997 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 1038 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 998 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknamePartyMon_1
 	return
 
 NicknamePartyMon_1:
-# 1039 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 999 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call Common_EventScript_GetGiftMonPartySlot
-# 1040 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1000 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call Common_EventScript_NameReceivedPartyMon
 	return
 
 
 NicknameBoxMon::
-# 1047 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1007 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox NicknamePartyMon_Text_0, MSGBOX_YESNO
-# 1048 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1008 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	hidemonpic
-# 1049 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1009 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
-# 1050 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1010 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NicknameBoxMon_2
 NicknameBoxMon_1:
-# 1053 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1013 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	msgbox NicknameBoxMon_Text_0
 	return
 
 NicknameBoxMon_2:
-# 1051 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1011 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
 
 
-LittlerootTown_StartersHuis_EventScript_Zapdos_Text_0:
+LittlerootTown_StartersHuis_EventScript_Starmans_Text_0:
 # 13 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	.string "Hello, would you like to see more?$"
+	.string "Hello, I am Professor Starmans$"
 
-LittlerootTown_StartersHuis_EventScript_Zapdos_Text_1:
-# 21 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
-	.string "Choose your Pokemon wisely$"
+LittlerootTown_StartersHuis_EventScript_Starmans_Text_1:
+# 52 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+	.string "Choose wisely...$"
 
-LittlerootTown_StartersHuis_EventScript_Zapdos_Text_2:
-# 28 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+LittlerootTown_StartersHuis_EventScript_Starmans_Text_2:
+# 56 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Take care of your Pokemon$"
 
 LittlerootTown_StartersHuis_EventScript_PokeballOne_Text_0:
-# 49 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 99 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Don't Take Another$"
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_0:
-# 226 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 186 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Bulbasaur?$"
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_1:
-# 231 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 191 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Bulbasaur$"
 
 LittlerootTown_StartersHuis_EventScript_Bulbasaur_Text_2:
-# 245 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 205 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "No More Room$"
 
 LittlerootTown_StartersHuis_EventScript_Charmander_Text_0:
-# 256 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 216 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Charmander?$"
 
 LittlerootTown_StartersHuis_EventScript_Charmander_Text_1:
-# 261 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 221 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Charmander$"
 
 LittlerootTown_StartersHuis_EventScript_Squirtle_Text_0:
-# 286 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 246 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Squirtle?$"
 
 LittlerootTown_StartersHuis_EventScript_Squirtle_Text_1:
-# 291 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 251 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Squirtle$"
 
 LittlerootTown_StartersHuis_EventScript_Chikorita_Text_0:
-# 316 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 276 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Chikorita?$"
 
 LittlerootTown_StartersHuis_EventScript_Chikorita_Text_1:
-# 321 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 281 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Chikorita$"
 
 LittlerootTown_StartersHuis_EventScript_Cyndaquil_Text_0:
-# 346 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 306 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Cyndaquil?$"
 
 LittlerootTown_StartersHuis_EventScript_Cyndaquil_Text_1:
-# 351 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 311 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Cyndaquil$"
 
 LittlerootTown_StartersHuis_EventScript_Totodile_Text_0:
-# 376 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 336 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Totodile?$"
 
 LittlerootTown_StartersHuis_EventScript_Totodile_Text_1:
-# 381 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 341 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Totodile$"
 
 LittlerootTown_StartersHuis_EventScript_Treecko_Text_0:
-# 406 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 366 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Treecko?$"
 
 LittlerootTown_StartersHuis_EventScript_Treecko_Text_1:
-# 411 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 371 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Treecko$"
 
 LittlerootTown_StartersHuis_EventScript_Torchic_Text_0:
-# 436 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 396 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Torchic?$"
 
 LittlerootTown_StartersHuis_EventScript_Torchic_Text_1:
-# 441 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 401 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Torchic$"
 
 LittlerootTown_StartersHuis_EventScript_Mudkip_Text_0:
-# 466 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 426 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Mudkip?$"
 
 LittlerootTown_StartersHuis_EventScript_Mudkip_Text_1:
-# 471 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 431 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Mudkip$"
 
 LittlerootTown_StartersHuis_EventScript_Turtwig_Text_0:
-# 496 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 456 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Turtwig?$"
 
 LittlerootTown_StartersHuis_EventScript_Turtwig_Text_1:
-# 501 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 461 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Turtwig$"
 
 LittlerootTown_StartersHuis_EventScript_Chimchar_Text_0:
-# 526 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 486 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Chimchar?$"
 
 LittlerootTown_StartersHuis_EventScript_Chimchar_Text_1:
-# 531 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 491 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Chimchar$"
 
 LittlerootTown_StartersHuis_EventScript_Piplup_Text_0:
-# 556 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 516 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Piplup?$"
 
 LittlerootTown_StartersHuis_EventScript_Piplup_Text_1:
-# 561 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 521 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Piplup$"
 
 LittlerootTown_StartersHuis_EventScript_Snivy_Text_0:
-# 586 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 546 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Snivy?$"
 
 LittlerootTown_StartersHuis_EventScript_Snivy_Text_1:
-# 591 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 551 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Snivy$"
 
 LittlerootTown_StartersHuis_EventScript_Tepig_Text_0:
-# 616 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 576 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Tepig?$"
 
 LittlerootTown_StartersHuis_EventScript_Tepig_Text_1:
-# 621 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 581 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Tepig$"
 
 LittlerootTown_StartersHuis_EventScript_Oshawott_Text_0:
-# 646 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 606 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Oshawott?$"
 
 LittlerootTown_StartersHuis_EventScript_Oshawott_Text_1:
-# 651 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 611 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Oshawott$"
 
 LittlerootTown_StartersHuis_EventScript_Chespin_Text_0:
-# 676 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 636 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Chespin?$"
 
 LittlerootTown_StartersHuis_EventScript_Chespin_Text_1:
-# 681 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 641 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Chespin$"
 
 LittlerootTown_StartersHuis_EventScript_Fennekin_Text_0:
-# 706 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 666 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Fennekin?$"
 
 LittlerootTown_StartersHuis_EventScript_Fennekin_Text_1:
-# 711 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 671 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Fennekin$"
 
 LittlerootTown_StartersHuis_EventScript_Froakie_Text_0:
-# 736 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 696 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Froakie?$"
 
 LittlerootTown_StartersHuis_EventScript_Froakie_Text_1:
-# 741 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 701 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Froakie$"
 
 LittlerootTown_StartersHuis_EventScript_Rowlet_Text_0:
-# 766 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 726 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Rowlet?$"
 
 LittlerootTown_StartersHuis_EventScript_Rowlet_Text_1:
-# 771 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 731 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Rowlet$"
 
 LittlerootTown_StartersHuis_EventScript_Litten_Text_0:
-# 796 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 756 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Litten?$"
 
 LittlerootTown_StartersHuis_EventScript_Litten_Text_1:
-# 801 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 761 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Litten$"
 
 LittlerootTown_StartersHuis_EventScript_Popplio_Text_0:
-# 826 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 786 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Popplio?$"
 
 LittlerootTown_StartersHuis_EventScript_Popplio_Text_1:
-# 831 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 791 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Popplio$"
 
 LittlerootTown_StartersHuis_EventScript_Grookey_Text_0:
-# 856 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 816 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Grookey?$"
 
 LittlerootTown_StartersHuis_EventScript_Grookey_Text_1:
-# 861 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 821 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Grookey$"
 
 LittlerootTown_StartersHuis_EventScript_Scorbunny_Text_0:
-# 886 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 846 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Scorbunny?$"
 
 LittlerootTown_StartersHuis_EventScript_Scorbunny_Text_1:
-# 891 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 851 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Scorbunny$"
 
 LittlerootTown_StartersHuis_EventScript_Sobble_Text_0:
-# 916 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 876 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Sobble?$"
 
 LittlerootTown_StartersHuis_EventScript_Sobble_Text_1:
-# 921 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 881 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Sobble$"
 
 LittlerootTown_StartersHuis_EventScript_Sprigatito_Text_0:
-# 946 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 906 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Sprigatito?$"
 
 LittlerootTown_StartersHuis_EventScript_Sprigatito_Text_1:
-# 951 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 911 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Sprigatito$"
 
 LittlerootTown_StartersHuis_EventScript_Fuecoco_Text_0:
-# 976 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 936 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Fuecoco?$"
 
 LittlerootTown_StartersHuis_EventScript_Fuecoco_Text_1:
-# 981 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 941 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Fuecoco$"
 
 LittlerootTown_StartersHuis_EventScript_Quaxly_Text_0:
-# 1006 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 966 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Do you want to choose Quaxly?$"
 
 LittlerootTown_StartersHuis_EventScript_Quaxly_Text_1:
-# 1011 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 971 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Recieved Quaxly$"
 
 NicknamePartyMon_Text_0:
-# 1035 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 995 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Give a nickname?$"
 
 NicknameBoxMon_Text_0:
-# 1053 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1013 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "Transferred to PC$"
 
 LittlerootTown_StartersHuis_NotChosen::
-# 1056 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
+# 1016 "data/maps/LittlerootTown_StartersHuis/scripts.pory"
 	.string "You did not choose the Pokemon$"

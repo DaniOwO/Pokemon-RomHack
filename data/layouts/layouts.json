@@ -10209,7 +10209,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_STARTERS_HUIS",
       "name": "LittlerootTown_StartersHuis_Layout",
-      "width": 13,
+      "width": 12,
       "height": 11,
       "border_width": 1,
       "border_height": 2,
@@ -10229,6 +10229,18 @@
       "secondary_tileset": "gTileset_AmberleafHouses",
       "border_filepath": "data/layouts/Amberleaf/border.bin",
       "blockdata_filepath": "data/layouts/Amberleaf/map.bin"
+    },
+    {
+      "id": "LAYOUT_AMBERLEAF_HOME",
+      "name": "Amberleaf_Home_Layout",
+      "width": 20,
+      "height": 14,
+      "border_width": 1,
+      "border_height": 1,
+      "primary_tileset": "gTileset_Indoor",
+      "secondary_tileset": "gTileset_AmberleafInside",
+      "border_filepath": "data/layouts/Amberleaf_Home/border.bin",
+      "blockdata_filepath": "data/layouts/Amberleaf_Home/map.bin"
     }
   ]
 }

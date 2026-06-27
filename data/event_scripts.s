@@ -1741,3 +1741,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LittlerootTown_StartersHuis/scripts.inc"
 
 	.include "data/maps/Amberleaf/scripts.inc"
+
+	.include "data/maps/Amberleaf_Home/scripts.inc"

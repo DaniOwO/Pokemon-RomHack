@@ -1178,3 +1178,14 @@ const u8 gText_Volcanobadge[] = _("VOLCANOBADGE");
 const u8 gText_Earthbadge[] = _("EARTHBADGE");
 const u8 gText_OakImportantToGetToKnowPokemonThroughly[] = _("OAK: It's important to get to know\nyour POKéMON thoroughly.\p");
 const u8 gText_OakThisIsListOfPokemon[] = _("This is a list of your POKéMON,\n{PLAYER}.\pOpen this to check the skills\nand moves of your POKéMON.\pYou also choose POKéMON here if\nyou want to use an item on one.{PAUSE_UNTIL_PRESS}");
+
+
+const u8 gText_KantoStarter[] = _("KANTO");
+const u8 gText_JohtoStarter[] = _("JOHTO");
+const u8 gText_HoennStarter[] = _("HOENN");
+const u8 gText_SinnohStarter[] = _("SINNOH");
+const u8 gText_UnovaStarter[] = _("UNOVA");
+const u8 gText_KalosStarter[] = _("KALOS");
+const u8 gText_AlolaStarter[] = _("ALOLA");
+const u8 gText_GalarStarter[] = _("GALAR");
+const u8 gText_PaldeaStarter[] = _("PALDEA");

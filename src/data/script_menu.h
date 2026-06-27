@@ -1127,6 +1127,19 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_Starters[] =
+{
+    {gText_KantoStarter},
+    {gText_JohtoStarter},
+    {gText_HoennStarter},
+    {gText_SinnohStarter},
+    {gText_UnovaStarter},
+    {gText_KalosStarter},
+    {gText_AlolaStarter},
+    {gText_GalarStarter},
+    {gText_PaldeaStarter},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1294,6 +1307,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_STARTER_CHOICE]                             = MULTICHOICE(MultichoiceList_Starters),
 };
 
 const u8 *const gStdStrings[] =

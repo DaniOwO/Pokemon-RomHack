@@ -51,15 +51,15 @@
 
 #else
 
-#define FLAG_UNUSED_0x020    0x20 // Gen 1 Starter Ball
-#define FLAG_UNUSED_0x021    0x21 // Gen 2 Starter Ball
-#define FLAG_UNUSED_0x022    0x22 // Gen 3 Starter Ball
-#define FLAG_UNUSED_0x023    0x23 // Gen 4 Starter Ball
-#define FLAG_UNUSED_0x024    0x24 // Gen 5 Starter Ball
-#define FLAG_UNUSED_0x025    0x25 // Gen 6 Starter Ball
-#define FLAG_UNUSED_0x026    0x26 // Gen 7 Starter Ball
-#define FLAG_UNUSED_0x027    0x27 // Gen 8 Starter Ball
-#define FLAG_UNUSED_0x028    0x28 // Gen 9 Starter Ball
+#define STARTER_GEN1    0x20 // Gen 1 Starter Ball
+#define STARTER_GEN2    0x21 // Gen 2 Starter Ball
+#define STARTER_GEN3    0x22 // Gen 3 Starter Ball
+#define STARTER_GEN4    0x23 // Gen 4 Starter Ball
+#define STARTER_GEN5    0x24 // Gen 5 Starter Ball
+#define STARTER_GEN6    0x25 // Gen 6 Starter Ball
+#define STARTER_GEN7    0x26 // Gen 7 Starter Ball
+#define STARTER_GEN8    0x27 // Gen 8 Starter Ball
+#define STARTER_GEN9    0x28 // Gen 9 Starter Ball
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

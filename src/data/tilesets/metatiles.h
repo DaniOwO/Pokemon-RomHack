@@ -417,3 +417,9 @@ const u16 gMetatileAttributes_PorytilesManaged_Amberleaf[] = INCBIN_U16("data/ti
 
 const u16 gMetatiles_PorytilesManaged_AmberleafHouses[] = INCBIN_U16("data/tilesets/secondary/amberleaf_houses/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_AmberleafHouses[] = INCBIN_U16("data/tilesets/secondary/amberleaf_houses/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Indoor[] = INCBIN_U16("data/tilesets/primary/indoor/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Indoor[] = INCBIN_U16("data/tilesets/primary/indoor/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_AmberleafInside[] = INCBIN_U16("data/tilesets/secondary/amberleaf_inside/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_AmberleafInside[] = INCBIN_U16("data/tilesets/secondary/amberleaf_inside/porytiles_bin/metatile_attributes.bin");
