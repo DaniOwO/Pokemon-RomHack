@@ -1541,3 +1541,36 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
+
+const struct Tileset gTileset_Border =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_Border,
+    .palettes = gTilesetPalettes_PorytilesManaged_Border,
+    .metatiles = gMetatiles_PorytilesManaged_Border,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Border,
+    .callback = InitTilesetAnim_PorytilesManaged_Border,
+};
+
+const struct Tileset gTileset_Amberleaf =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_Amberleaf,
+    .palettes = gTilesetPalettes_PorytilesManaged_Amberleaf,
+    .metatiles = gMetatiles_PorytilesManaged_Amberleaf,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Amberleaf,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_AmberleafHouses =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_AmberleafHouses,
+    .palettes = gTilesetPalettes_PorytilesManaged_AmberleafHouses,
+    .metatiles = gMetatiles_PorytilesManaged_AmberleafHouses,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_AmberleafHouses,
+    .callback = NULL,
+};

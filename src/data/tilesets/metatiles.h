@@ -408,3 +408,12 @@ const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
 
 #endif // IS_FRLG
+
+const u16 gMetatiles_PorytilesManaged_Border[] = INCBIN_U16("data/tilesets/primary/border/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Border[] = INCBIN_U16("data/tilesets/primary/border/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Amberleaf[] = INCBIN_U16("data/tilesets/secondary/amberleaf/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Amberleaf[] = INCBIN_U16("data/tilesets/secondary/amberleaf/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_AmberleafHouses[] = INCBIN_U16("data/tilesets/secondary/amberleaf_houses/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_AmberleafHouses[] = INCBIN_U16("data/tilesets/secondary/amberleaf_houses/porytiles_bin/metatile_attributes.bin");

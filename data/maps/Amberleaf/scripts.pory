@@ -1,0 +1,20 @@
+mapscripts Amberleaf_MapScripts{
+}
+
+script Amberleaf_EventScript_LabSign{
+    lockall
+    msgbox("Prof. Starmans' Lab")
+    releaseall
+}
+
+script Amberleaf_EventScript_HomeSign{
+    lockall
+    msgbox("Your home?")
+    releaseall
+}
+
+script Amberleaf_EventScript_RivalHomeSign{
+    lockall
+    msgbox("Rival's home?")
+    releaseall
+}

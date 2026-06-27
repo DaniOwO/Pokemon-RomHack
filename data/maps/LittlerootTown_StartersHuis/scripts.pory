@@ -1,0 +1,1058 @@
+mapscripts LittlerootTown_StartersHuis_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_StartersHuis_EventScript_BallDefault
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_BallDefault{
+    setvar(VAR_UNUSED_0x40F7, 0)
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_Zapdos{
+    lockall
+    faceplayer
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        msgbox("Hello, would you like to see more?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            if(var(VAR_UNUSED_0x40F7) != 2){
+                addvar(VAR_UNUSED_0x40F7, 1)
+            }
+            else{
+                setvar(VAR_UNUSED_0x40F7, 0)
+            }
+            msgbox("Choose your Pokemon wisely")
+        }
+        else{
+            msgbox("Choose your Pokemon wisely")
+        }
+    }
+    else{
+        msgbox("Take care of your Pokemon")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_PokeballOne{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Bulbasaur)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Charmander)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Squirtle)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_PokeballTwo{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Chikorita)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Cyndaquil)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Totodile)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_PokeballThree{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Treecko)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Torchic)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Mudkip)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script LittlerootTown_StartersHuis_EventScript_PokeballFour{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Turtwig)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Chimchar)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Piplup)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script LittlerootTown_StartersHuis_EventScript_PokeballFive{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Snivy)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Tepig)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Oshawott)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script LittlerootTown_StartersHuis_EventScript_PokeballSix{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Chespin)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Fennekin)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Froakie)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script LittlerootTown_StartersHuis_EventScript_PokeballSeven{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Rowlet)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Litten)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Popplio)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script LittlerootTown_StartersHuis_EventScript_PokeballEight{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Grookey)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Scorbunny)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Sobble)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+
+script LittlerootTown_StartersHuis_EventScript_PokeballNine{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x020) || flag(FLAG_UNUSED_0x021) || flag(FLAG_UNUSED_0x022) || flag(FLAG_UNUSED_0x023) || flag(FLAG_UNUSED_0x024) || flag(FLAG_UNUSED_0x025) || flag(FLAG_UNUSED_0x026) || flag(FLAG_UNUSED_0x027) || flag(FLAG_UNUSED_0x028))){
+        if(var(VAR_UNUSED_0x40F7) == 0){
+            call(LittlerootTown_StartersHuis_EventScript_Sprigatito)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 1){
+            call(LittlerootTown_StartersHuis_EventScript_Fuecoco)
+        }
+        elif(var(VAR_UNUSED_0x40F7) == 2){
+            call(LittlerootTown_StartersHuis_EventScript_Quaxly)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_Bulbasaur{
+    showmonpic(SPECIES_BULBASAUR, 10,3)
+    msgbox("Do you want to choose Bulbasaur?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_BULBASAUR, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Bulbasaur")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Bulbasaur")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+ 
+script LittlerootTown_StartersHuis_EventScript_Charmander{
+    showmonpic(SPECIES_CHARMANDER, 10,3)
+    msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHARMANDER, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Charmander")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Charmander")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Squirtle{
+    showmonpic(SPECIES_SQUIRTLE, 10,3)
+    msgbox("Do you want to choose Squirtle?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SQUIRTLE, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Squirtle")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Squirtle")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x020)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Chikorita{
+    showmonpic(SPECIES_CHIKORITA, 10,3)
+    msgbox("Do you want to choose Chikorita?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHIKORITA, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chikorita")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chikorita")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Cyndaquil{
+    showmonpic(SPECIES_CYNDAQUIL, 10,3)
+    msgbox("Do you want to choose Cyndaquil?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CYNDAQUIL, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Cyndaquil")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Cyndaquil")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Totodile{
+    showmonpic(SPECIES_TOTODILE, 10,3)
+    msgbox("Do you want to choose Totodile?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TOTODILE, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Totodile")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Totodile")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x021)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Treecko{
+    showmonpic(SPECIES_TREECKO, 10,3)
+    msgbox("Do you want to choose Treecko?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TREECKO, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Treecko")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Treecko")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Torchic{
+    showmonpic(SPECIES_TORCHIC, 10,3)
+    msgbox("Do you want to choose Torchic?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TORCHIC, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Torchic")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Torchic")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Mudkip{
+    showmonpic(SPECIES_MUDKIP, 10,3)
+    msgbox("Do you want to choose Mudkip?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_MUDKIP, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Mudkip")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Mudkip")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x022)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Turtwig{
+    showmonpic(SPECIES_TURTWIG, 10,3)
+    msgbox("Do you want to choose Turtwig?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TURTWIG, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Turtwig")
+            removeobject(4)
+            setflag(FLAG_UNUSED_0x023)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Turtwig")
+            removeobject(4)
+            setflag(FLAG_UNUSED_0x023)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Chimchar{
+    showmonpic(SPECIES_CHIMCHAR, 10,3)
+    msgbox("Do you want to choose Chimchar?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHIMCHAR, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chimchar")
+            removeobject(4)
+            setflag(FLAG_UNUSED_0x023)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chimchar")
+            removeobject(4)
+            setflag(FLAG_UNUSED_0x023)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Piplup{
+    showmonpic(SPECIES_PIPLUP, 10,3)
+    msgbox("Do you want to choose Piplup?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_PIPLUP, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Piplup")
+            removeobject(4)
+            setflag(FLAG_UNUSED_0x023)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Piplup")
+            removeobject(4)
+            setflag(FLAG_UNUSED_0x023)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Snivy{
+    showmonpic(SPECIES_SNIVY, 10,3)
+    msgbox("Do you want to choose Snivy?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SNIVY, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Snivy")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x024)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Snivy")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x024)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Tepig{
+    showmonpic(SPECIES_TEPIG, 10,3)
+    msgbox("Do you want to choose Tepig?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TEPIG, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Tepig")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x024)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Tepig")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x024)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Oshawott{
+    showmonpic(SPECIES_OSHAWOTT, 10,3)
+    msgbox("Do you want to choose Oshawott?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_OSHAWOTT, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Oshawott")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x024)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Oshawott")
+            removeobject(5)
+            setflag(FLAG_UNUSED_0x024)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Chespin{
+    showmonpic(SPECIES_CHESPIN, 10,3)
+    msgbox("Do you want to choose Chespin?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHESPIN, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chespin")
+            removeobject(6)
+            setflag(FLAG_UNUSED_0x025)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chespin")
+            removeobject(6)
+            setflag(FLAG_UNUSED_0x025)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Fennekin{
+    showmonpic(SPECIES_FENNEKIN, 10,3)
+    msgbox("Do you want to choose Fennekin?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_FENNEKIN, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Fennekin")
+            removeobject(6)
+            setflag(FLAG_UNUSED_0x025)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Fennekin")
+            removeobject(6)
+            setflag(FLAG_UNUSED_0x025)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Froakie{
+    showmonpic(SPECIES_FROAKIE, 10,3)
+    msgbox("Do you want to choose Froakie?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_FROAKIE, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Froakie")
+            removeobject(6)
+            setflag(FLAG_UNUSED_0x025)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Froakie")
+            removeobject(6)
+            setflag(FLAG_UNUSED_0x025)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Rowlet{
+    showmonpic(SPECIES_ROWLET, 10,3)
+    msgbox("Do you want to choose Rowlet?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_ROWLET, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Rowlet")
+            removeobject(7)
+            setflag(FLAG_UNUSED_0x026)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Rowlet")
+            removeobject(7)
+            setflag(FLAG_UNUSED_0x026)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Litten{
+    showmonpic(SPECIES_LITTEN, 10,3)
+    msgbox("Do you want to choose Litten?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_LITTEN, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Litten")
+            removeobject(7)
+            setflag(FLAG_UNUSED_0x026)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Litten")
+            removeobject(7)
+            setflag(FLAG_UNUSED_0x026)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Popplio{
+    showmonpic(SPECIES_POPPLIO, 10,3)
+    msgbox("Do you want to choose Popplio?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_POPPLIO, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Popplio")
+            removeobject(7)
+            setflag(FLAG_UNUSED_0x026)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Popplio")
+            removeobject(7)
+            setflag(FLAG_UNUSED_0x026)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Grookey{
+    showmonpic(SPECIES_GROOKEY, 10,3)
+    msgbox("Do you want to choose Grookey?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GROOKEY, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Grookey")
+            removeobject(8)
+            setflag(FLAG_UNUSED_0x027)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Grookey")
+            removeobject(8)
+            setflag(FLAG_UNUSED_0x027)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Scorbunny{
+    showmonpic(SPECIES_SCORBUNNY, 10,3)
+    msgbox("Do you want to choose Scorbunny?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SCORBUNNY, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Scorbunny")
+            removeobject(8)
+            setflag(FLAG_UNUSED_0x027)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Scorbunny")
+            removeobject(8)
+            setflag(FLAG_UNUSED_0x027)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Sobble{
+    showmonpic(SPECIES_SOBBLE, 10,3)
+    msgbox("Do you want to choose Sobble?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SOBBLE, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Sobble")
+            removeobject(8)
+            setflag(FLAG_UNUSED_0x027)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Sobble")
+            removeobject(8)
+            setflag(FLAG_UNUSED_0x027)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Sprigatito{
+    showmonpic(SPECIES_SPRIGATITO, 10,3)
+    msgbox("Do you want to choose Sprigatito?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SPRIGATITO, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Sprigatito")
+            removeobject(9)
+            setflag(FLAG_UNUSED_0x028)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Sprigatito")
+            removeobject(9)
+            setflag(FLAG_UNUSED_0x028)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Fuecoco{
+    showmonpic(SPECIES_FUECOCO, 10,3)
+    msgbox("Do you want to choose Fuecoco?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_FUECOCO, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Fuecoco")
+            removeobject(9)
+            setflag(FLAG_UNUSED_0x028)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Fuecoco")
+            removeobject(9)
+            setflag(FLAG_UNUSED_0x028)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+
+script LittlerootTown_StartersHuis_EventScript_Quaxly{
+    showmonpic(SPECIES_QUAXLY, 10,3)
+    msgbox("Do you want to choose Quaxly?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_QUAXLY, 5)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Quaxly")
+            removeobject(9)
+            setflag(FLAG_UNUSED_0x028)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Quaxly")
+            removeobject(9)
+            setflag(FLAG_UNUSED_0x028)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(LittlerootTown_StartersHuis_NotChosen)
+    }
+}
+ 
+script NicknamePartyMon{
+    msgbox("Give a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    setflag(FLAG_SYS_POKEMON_GET)
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+ 
+ 
+}
+ 
+script NicknameBoxMon{
+    msgbox("Give a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    setflag(FLAG_SYS_POKEMON_GET)
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox("Transferred to PC")
+}
+ 
+text LittlerootTown_StartersHuis_NotChosen{
+    "You did not choose the Pokemon"
+}
